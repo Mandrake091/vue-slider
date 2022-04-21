@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(44, 44, 44);
+    color: antiquewhite;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+}
+
+.thumbnail {
+    filter: brightness(60%);
+}
+
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item {
+    float: left;
+    width: 750px;
+    height: 425px;
+    position: relative;
+}
+.item .text {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+    color: white;
+}
+
+
+
+.title {
+    border-radius: 30px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.346);
+    width: 60%;
+    right: 0;
+    padding-right: 5px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.1vw;
+    text-shadow: 2px 2px 5px black;
+}
+
+.thumbnail.active {
+    transition: ease-in-out, 0.5s;
+    filter: brightness(100%);
+    border: 1px solid white;
+}
+
+p {
+    padding-left: 50px;
+}
+
+.thumbs {
+    float: left;
+    height: 300px;
+    background: #000;
+    position: relative;
+}
+.thumb {
+    height: calc((450px) / 5);
+    opacity: 0.5;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.prev,
+.next {
+    font-size: 25px;
+}
+
+.fa-solid {
+    cursor: pointer;
+}
+
+.thumb.active {
+    border: 2px solid #ccc;
+    opacity: 1;
+    animation-name: fade;
+    animation-duration: 0.4s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .2
+    }
+
+    100% {
+        opacity: 1
+    }
+}
